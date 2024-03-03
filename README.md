@@ -18,7 +18,11 @@ To load the pre-trained model, the `load_model` function from the `Bayes` class 
     model = Bayes()
     model.load_model('pretrained_model.pkl')
 
-
+2. Computer vision approach to find the contour adn blobs, 
+    ``` bash
+    find_ellipse_contour.py
+    detect_blob_cv.py
+Can we detect the blobs and contours and blobs on simple images, but not very efficient on the provided dataset 
 ## Prerequisites
 - Python 3
 - PyTorch
@@ -43,15 +47,15 @@ Pretrained weights for the ResNet-101 model can be downloaded from [Google Drive
     shapes_dataset_MR
     ├── labels.csv
     └── train
-    ├── class_1
-    │ ├── image1.png
-    │ ├── image2.png
-    │ └── ...
-    ├── class_2
-    │ ├── image1.png
-    │ ├── image2.png
-    │ └── ...
-    └── ...
+        ├── class_1
+        │ ├── image1.png
+        │ ├── image2.png
+        │ └── ...
+        ├── class_2
+        │ ├── image1.png
+        │ ├── image2.png
+        │ └── ...
+        └── ...
 ## Training
 To train the ResNet-101 model, run the following command:
 
@@ -60,9 +64,6 @@ The trained model weights will be saved as `resnet_101_MR.pth`.
 
 ## Testing
 To test the trained model on a test set, run the following command:
-
-
-
 
 ## Evaluation
 You can evaluate the model performance by computing accuracy metrics using the test results.
